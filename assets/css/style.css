@@ -1,0 +1,11 @@
+.jumbotron{
+	margin-top: 75px;
+}
+
+.img-dscto{
+	max-width: 200px;
+    width: 100%;
+    float: left;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}

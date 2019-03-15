@@ -30,8 +30,8 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="http://localhost/buscadorTest/">Inicio</a></li>
-            <li><a href="http://localhost/buscadorTest/index.php/buscador/stats">Estadísticas</a></li>
+            <li><a href="http://localhost/buscadorTest/">Inicio</a></li>
+            <li class="active"><a href="http://localhost/buscadorTest/index.php/buscador/stats">Estadísticas</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -41,16 +41,27 @@
 
 	<!-- Main component for a primary marketing message or call to action -->
 		<div class="jumbotron">
-			<h1>Descuentos</h1>
-			<form>
-			  <div class="form-group">
-				<label for="keyword">Buscar:</label>
-				<input type="title" class="form-control" id="keyword" placeholder="Título">
-			  </div>
-			  <button type="submit" class="btn btn-default" id="buscar">Buscar</button>
-			</form>
+			<h1>Estadísticas</h1>
 		</div>
-		<div class="row" id="results">
+		<div class="row">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>Título</th>
+						<th>N° búsqueda</th>
+						<th>Palabras buscadas</th>
+					</tr>
+				</thead>
+				<?php foreach($busquedas as $busqueda): ?>
+				<tbody>
+					<tr>
+						<td><?=$busqueda->titulo?></td>
+						<td><?=$busqueda->count_desc?></td>
+						<td><?=$busqueda->busquedas?></td>
+					</tr>
+				</tbody>
+				<?php endforeach; ?>
+			</table>
 		</div>
     </div> <!-- /container -->
 
